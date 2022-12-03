@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le Van Minh prepare day14</title>
+  <!--phan link cdn icon -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <!-- phan cdn google font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- link favicon icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
+
+  <!-- phan link file css -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+
+<body>
+  <div class="app">
+    <main id="main">
+      <h1>Day 13: <code> Array</code> trong <code>Javascript</code></h1>
+
+      <section class="main__item css-transform">
+        <h2>I. Khái quát chung về <code>Array</code></h2>
+        <div class="main__item__content">
+          <ol>
+            <li>
+              <h3>Khái niệm</h3>
+              <p>
+                <code> array </code> là một biến đặc biệt có thể chứa nhiều giá trị, nó gải quyết tình trạng phải khai
+                báo
+                nhiêu biến với cấu trúc lặp lại giống nhau.
+              </p>
+              <h3>Ví dụ</h3>
+              <img src="./assets/img/Screenshot from 2022-12-03 15-20-17.png" alt="" />
+            </li>
+            <li>
+              <h3>So sánh với <code>object</code></h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nội dung so sánh</th>
+                    <th><code>array</code></th>
+                    <th><code>object</code></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Giống nhau</th>
+                    <td colspan="2">
+                      <p>array cũng là object nhưng đặc biệt</p>
+                      <p>Đều chứa nhiều phần tử với các kiểu dữ liệu khác nhau bên trong nó</p>
+                      <p>Đều truy cập đến các phần tử theo phương thức <code>name[]</code></p>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <th>Khác nhau</th>
+                    <td>
+                      <p><code>array</code> có các key là số nguyên liên tiếp nên dùng array trong trường hợp chú trọng
+                        về thứ tự
+                        của các phần tử</p>
+                      <p>Chỉ có thể truy cập theo phương thức <code>arrayName[]</code></p>
+                    </td>
+                    <td>
+                      <p><code>object</code> có các <code>properties</code> và <code>method</code> nên array chú trọng
+                        về tên của properties <code>(key)</code></p>
+                      <p>Có thể truy cập theo phương thức <code>arrayName.key</code></p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li>
+              <h4>Cách kiểm tra một biến có phải là <code>array</code> hay không</h4>
+              <img src="./assets/img/Screenshot from 2022-12-03 17-38-45.png" alt="">
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="main__item css-transform">
+        <h2>II. Khai báo <code>array</code> trong <code>Javascript</code></h2>
+        <div class="main__item__content">
+          <ol>
+            <li>
+              <h3>
+                Khởi tạo bằng trình khởi tạo <code>(initializer array)</code>
+              </h3>
+              <h3>Ví dụ</h3>
+              <img src="./assets/img/Screenshot from 2022-12-03 15-50-20.png" alt="" />
+              <h3>
+                Khởi tạo một <code>array</code> trống sau đó thêm các phần tử
+              </h3>
+              <h3>Ví dụ</h3>
+              <img src="./assets/img/Screenshot from 2022-12-03 15-52-40.png" alt="" />
+            </li>
+            <li>
+              <h3>
+                Sử dụng từ khóa New (hàm tạo)
+              </h3>
+              <img src="./assets/img/Screenshot from 2022-12-03 15-54-18.png" alt="">
+            </li>
+            <i>
+              Note: Khi khởi tạo theo cú pháp
+              <code>const array = new Array(30);</code> có nghĩa là tạo một array có độ dài là 30
+              <img src="./assets/img/Screenshot from 2022-12-03 15-56-23.png" alt="">
+            </i>
+          </ol>
+        </div>
+      </section>
+
+      <section class="main__item css-transform">
+        <h2>III. LÀM VIỆC VỚI <code>array</code></h2>
+        <div class="main__item__content">
+          <ol>
+            <li>
+              <h3>
+                Truy cập các phần tử của <code>array</code>
+              </h3>
+              <p>Sử dụng cú pháp <code>arrayName[index]</code></p>
+              <img src="./assets/img/Screenshot from 2022-12-03 16-06-11.png" alt="">
+            </li>
+            <li>
+              <h3>Các thuộc tính và phương thức quan trọng trong <code>array</code></h3>
+              <ul>
+                <li>
+                  <h4>Thuộc tính <code>length</code></h4>
+                  <img src="./assets/img/Screenshot from 2022-12-03 16-11-31.png" alt="">
+                </li>
+                <li>
+                  <h4>chuyển <code>array</code> thành chuỗi với <code>let string = arrayName.toString();</code></h4>
+                  <p>Nó không làm thay đổi mảng nhưng trả về một chuỗi</p>
+                  <h4>Ví dụ</h4>
+                  <img src="./assets/img/Screenshot from 2022-12-03 16-19-09.png" alt="" />
+                </li>
+                <li>
+                  <h4>Nối các phần tử trong mảng và trả về chuỗi sau khi nối với cú pháp <code>arrayName.join()</code>
+                  </h4>
+                  <h4>Ví dụ</h4>
+                  <img src="./assets/img/Screenshot from 2022-12-03 16-23-09.png" alt="" />
+                </li>
+                <li>
+                  <h4>Thêm bớt một phần tử vào mảng với cú pháp <code>arrayName.push()</code> và
+                    <code>arrayName.pop()</code>
+                  </h4>
+                  <ul>
+                    <li>
+                      <h5><code>arrayName.push('valueAdd')</code> để thêm phần tử <code>valueAdd</code> vào trong
+                        <code>arrayName</code> và trả về giá trị là độ dài của mảng mới
+                      </h5>
+                      <img src="./assets/img/Screenshot from 2022-12-03 16-27-18.png" alt=""> <br>
+                      <h5>Cũng có thể thêm một phần tử mới vào mảng với cú pháp <code>arrName[index] = valueAdd</code>
+                      </h5>
+                    </li>
+                    <li>
+                      <h5><code>arrayName.pop()</code>) để out một phần tử ra khỏi một mảng ở cuối và trả về phần tử bị
+                        out ra đó
+                      </h5>
+                      <img src="./assets/img/Screenshot from 2022-12-03 16-29-50.png" alt="">
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>Thêm bớt một phần tử vào mảng với cú pháp <code>arrayName.shirf()</code> và
+                    <code>arrayName.unshirf()</code>
+                  </h4>
+                  <p>cơ chế tương tự pop() nhưng remove từ phần tử đầu tiên thay về phần tử cuối cùng ( và chuyển các
+                    chỉ mục của các phần tử sang thấp hơn)
+                    - unshirf() cơ chế giống push() nhưng thêm phần tử vào đầu mảng
+                  </p>
+                  <img src="./assets/img/Screenshot from 2022-12-03 16-36-53.png" alt="">
+                </li>
+                <li>
+                  <h4>Mergeling 2 mảng với cú pháp <code>arrayName.concat(arrayNameAdd1, arrayNameAdd2)</code> sẽ trả về
+                    một mảng mới và không thay đổi mảng hiện tại
+                  </h4>
+                  <h4>Ví dụ</h4>
+                  <img src="./assets/img/Screenshot from 2022-12-03 16-41-51.png" alt="" />
+                </li>
+                <li>
+                  <h4>Cắt mảng và nối mảng với cú pháp <code>newArrayName = arrayName.slice()</code> và
+                    <code>newArrayName = arrayName.splice()</code>
+                  </h4>
+                  <ul>
+                    <li>
+                      <h5><code>slice()</code> không làm thay đổi mảng có sẵn mà trả về giá trị là phần tử bị cắt </h5>
+                      <img src="./assets/img/Screenshot from 2022-12-03 16-49-12.png" alt="" />
+                    </li>
+                    <li>
+                      <h5><code>splice()</code> thay thế các phần tử trong mảng cũ (làm giá trị mảng cũ thay đổi) và trả
+                        về mảng mới là các phần tử bị cắt</h5>
+                      <img src="./assets/img/Screenshot from 2022-12-03 16-53-25.png" alt="">
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>Cú pháp duyệt mảng</h3>
+              <ul>
+                <li>
+                  <h5>Sử dụng <code>forEach()</code> lặp qua các phần tử của mảng</h5>
+                  <img src="./assets/img/Screenshot from 2022-12-03 17-00-56.png" alt="">
+                </li>
+                <li>
+                  <h5>Sử dụng <code> .map()</code>: Trả về giá trị là một mảng mới chứa các phần tử được trả về trong từ
+                    khóa return
+                    của callback
+                  </h5>
+                  <img src="./assets/img/Screenshot from 2022-12-03 17-08-08.png" alt="">
+                </li>
+                <li>
+                  <h5>Sử dụng <code> .filter()</code>: Trả về một mảng mới chứa các phần tử của mảng ban đầu thỏa mãn
+                    điều kiện nằm trong từ khóa return của callback
+                  </h5>
+                  <img src="./assets/img/Screenshot from 2022-12-03 17-09-34.png" alt="">
+                </li>
+                <li>
+                  <h5> Sử dụng <code>.reduce()</code> để cộng dồn các phần tử của mảng từ trái sang phải với một giá trị
+                    tích lũy ban đầu
+                  </h5>
+                  <img src="./assets/img/Screenshot from 2022-12-03 17-11-46.png" alt="">
+                </li>
+                <li>
+                  <h5> Sử dụng <code>every()</code> để kiểm tra xem tất các các phần tử có vượt qua điều kiện trong
+                    return của hàm callback hay không nó trả về true hoặc false
+                  </h5>
+                  <img src="./assets/img/Screenshot from 2022-12-03 17-13-29.png" alt="">
+                </li>
+                <li>
+                  <h5> Sử dụng <code>.some()</code> để kiểm tra xem có phần tử nào trong mảng vượt qua điều kiện viêt
+                    trong return của callback hay không trả về <code>boolean</code>
+                  </h5>
+                  <img src="./assets/img/Screenshot from 2022-12-03 17-14-23.png" alt="">
+                </li>
+                <li>
+                  <h5> Sử dụng <code>indexOf('element', 'vi trí bắt đầu tìm')</code> dể tìm vị trí của phần tử trong
+                    mảng trả về vị trí của phần tử, nếu không có trả về <code>-1</code>
+                  </h5>
+                  <img src="./assets/img/Screenshot from 2022-12-03 17-17-24.png" alt="">
+                </li>
+                <li>
+                  <h5>. Sử dụng <code>.find()</code> giống filter nhưng chỉ về phần tử đầu tiên trong mảng không phải
+                    tất cả như filter
+                  </h5>
+                  <img src="./assets/img/Screenshot from 2022-12-03 17-18-59.png" alt="">
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="main__item css-transform">
+        <h2>IV. Đối tượng <code>date</code></h2>
+        <div class="main__item__content">
+          <ol>
+            <li>
+              <h3>Khởi tạo</h3>
+              <img src="./assets/img/Screenshot from 2022-12-03 17-22-19.png" alt="">
+            </li>
+            <li>
+              <h3>Các hàm với đối tượng <code>date</code></h3>
+              <ol>
+                <li>
+                  <code>date.getDate()</code>: Lấy ra ngày
+                </li>
+                <li>
+                  <code>date.getDay()</code>: Lấy ra thứ từ 2-8
+                </li>
+                <li>
+                  <code>date.getFullYear()</code>: Lấy ra năm với 4 chữ số
+                </li>
+                <li>
+                  <code>date.getHour()</code>: Lấy ra giờ hiện tại
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="main__item css-transform">
+        <h2>IV. Đối tượng <code>Math</code></h2>
+        <div class="main__item__content">
+          <h4>Một số phương thức</h4>
+          <ol>
+            <li><code>Math.PI</code>: số Pi</li>
+            <li><code>Math.round(1.35)</code>: Làm tròn thành số nguyên</li>
+            <li><code>Math.abs</code>: Giá trị tuyệt đối</li>
+            <li><code>Math.ceil()</code>: Làm tròn trên</li>
+            <li><code>Math.floor()</code>: Làm tròn dưới</li>
+            <li><code>Math.random()</code>: trả về một thực số ngẫu nhiên nhỏ hơn 1 và lớn hơn 0</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div>
+    <h1 style="margin-top: 120px">The end./</h1>
+  </div>
+</body>
+<script src="index.js"></script>
+
+</html>
